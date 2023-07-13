@@ -1,0 +1,16 @@
+Tugas untuk Ayang:
+1. Isikan seeder untuk User, contoh:
+        \App\Models\User::insert([
+            [
+                'name' => 'Pengalaman',
+                'email' => "contoh@email.com",
+                'blablablaa'
+            ],
+            [
+                'name' => 'Pengalaman',
+                'email' => "contoh@email.com",
+                'blablablaa'
+            ],
+        ]);
+
+2. Buat model baru untuk stories dan photos. Cara: php artisan make:model Story -ms
