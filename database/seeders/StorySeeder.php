@@ -12,15 +12,6 @@ class StorySeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\Story::insert([
-            [
-                'name' => 'Pengalaman'
-                'name' => ''
-                'name' => 'Pengalaman'
-                'name' => 'Pengalaman'
-
-            ],
-
-        ]);
+     //
     }
 }
