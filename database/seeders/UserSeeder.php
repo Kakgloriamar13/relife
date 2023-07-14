@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,59 +14,75 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::insert([
+        User::insert([
             [
-                'name' => 'Elsa',
-                'username' => 'zahra_',
-                'email' => "elsa@email.com",
-                'password' => "elsa12",
-                'gander' => "P",
-                'born_date' => "28 agustus 2003",
-                'address' => "magelang",
+                'name' => 'Elsa Zahra Setiawati',
+                'username' => 'zahra',
+                'email' => "elsa@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Perempuan",
+                'born_date' => "2004/10/28",
+                'address' => "Jl. Sesuatu, Kab. Magelang",
                 'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
 
             ],
             [
-                'name' => 'Gloria',
-                'username' => 'ria_',
-                'email' => "glo@email.com",
-                'password' => "glo13",
-                'gander' => "P",
-                'born_date' => "13 maret 2003",
-                'address' => "karangmalang",
+                'name' => 'Geloria Marsela Nanda',
+                'username' => 'gloria',
+                'email' => "gloria@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Perempuan",
+                'born_date' => "2003/03/13",
+                'address' => "Jl. Banyu Mili, Kab. Sleman",
+                'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+
+            ],
+            [
+                'name' => 'Dwi Arfian',
+                'username' => 'dwi',
+                'email' => "dwi@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Laki-laki",
+                'born_date' => "2004/04/12",
+                'address' => "Jl. Selat Karimata, Kota Pekalongan",
+                'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+
+            ],
+            [
+                'name' => 'Salsabila Miftahul Atha',
+                'username' => 'bila',
+                'email' => "bila@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Perempuan",
+                'born_date' => "2004/05/12",
+                'address' => "Jl. Kasongan, Kab. Bantul",
+                'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'name' => 'Daffa Naufal Fathin',
+                'username' => 'daffa',
+                'email' => "daffa@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Laki-laki",
+                'born_date' => "2004/02/25",
+                'address' => "Jl. Rendang Bangka, Kab. Bangka",
+                'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'name' => 'Admin',
+                'username' => 'admin',
+                'email' => "admin@gmail.com",
+                'password' => bcrypt("apapapap"),
+                'gender' => "Laki-laki",
+                'born_date' => "2012/12/12",
+                'address' => "-",
                 'role' => "admin",
-
-            ],
-            [
-                'name' => 'Dwiar',
-                'username' => 'dwiar_',
-                'email' => "dwi@email.com",
-                'password' => "dwi12",
-                'gander' => "L",
-                'born_date' => "12 april 2004",
-                'address' => "pekalongan",
-                'role' => "admin",
-
-            ],
-            [
-                'name' => 'Salsaabila',
-                'username' => 'salsa_',
-                'email' => "bila@email.com",
-                'password' => "bil11",
-                'gander' => "P",
-                'born_date' => "12 mei 2004",
-                'address' => "yogyakarta",
-                'role' => "user",
-            ],
-            [
-                'name' => 'Daffa',
-                'username' => 'daff_',
-                'email' => "daffa@email.com",
-                'password' => "daffa12",
-                'gander' => "L",
-                'born_date' => "14 juli 2004",
-                'address' => "bangkabelitung",
-                'role' => "user",
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
         ]);
     }
